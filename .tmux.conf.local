@@ -418,11 +418,15 @@ tmux_conf_uninstall_plugins_on_reload=true
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @resurrect-strategy-vim 'session'
 set -g @resurrect-strategy-nvim 'session'
+set -g @resurrect-processes 'false'
 
 # set -g @plugin 'catppuccin/tmux'
 # set -g @catppuccin_flavour 'latte'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
+
+set -g @plugin 'sainnhe/tmux-fzf'
+bind-key "f" run-shell -b "$HOME/.tmux/plugins/tmux-fzf/scripts/window.sh switch"
 
 
 # -- custom variables ----------------------------------------------------------
@@ -452,4 +456,9 @@ set -g @resurrect-strategy-nvim 'session'
 # "$@"
 # # /!\ do not remove the previous line
 
+# set-option -sa terminal-features ',xterm-256color:RGB'
 set-option -sa terminal-features ',xterm-kitty:RGB'
+
+# enable image preview inside tmux
+set -g allow-passthrough on
+
