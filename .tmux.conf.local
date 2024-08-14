@@ -456,8 +456,8 @@ bind-key "f" run-shell -b "$HOME/.tmux/plugins/tmux-fzf/scripts/window.sh switch
 # "$@"
 # # /!\ do not remove the previous line
 
-# set-option -sa terminal-features ',xterm-256color:RGB'
-set-option -sa terminal-features ',xterm-kitty:RGB'
+set-option -sa terminal-features ',xterm-256color:RGB'
+# set-option -sa terminal-features ',xterm-kitty:RGB'
 
 # enable image preview inside tmux
 set -g allow-passthrough on
